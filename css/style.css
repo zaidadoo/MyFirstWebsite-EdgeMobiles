@@ -195,10 +195,11 @@ nav a:hover {
 /* footer */
 
 .footer{
+  margin-right: 0 auto;
   clear: both;
   bottom: 0;
   position: fixed;
-  width: 100%;
+  width: 25%;
   z-index: 999;
 }
 
@@ -210,6 +211,7 @@ nav a:hover {
   clear: both;
   font: 10pt verdana;
   border-top: 1px solid white;
+  border-right: 1px solid white;
   padding-top: 1em;
   padding-bottom: 1em;
 }

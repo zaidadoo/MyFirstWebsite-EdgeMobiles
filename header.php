@@ -42,15 +42,7 @@ session_start();
     
     <nav>
       <ul>
-        <div class="dropdown">
-          <button onclick="desktop()" class="dropbtn">STORE</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="store.php">PRODUCTS</a>
-            <a href="#">TECH SUPPORT</a>
-          </div>
-        </div>
-        <div class="deskno"><li><a href="store.php">PRODUCTS</a></li>
-        <li><a href="#">TECH SUPPORT</a></li></div>
+        <li><a href="store.php">PRODUCTS</a></li>
         <li><a href="cart.php">CART</a></li>
         <?php
         if(!isset($_SESSION['s_id'])){

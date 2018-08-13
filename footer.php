@@ -1,7 +1,9 @@
 <center>
+  <a href="chat.php">
 <div class="footer">
   <div class="legality">
-        © Copyright 2018 IB
+        + Live Support
       </div>
 </div>
+    </a>
 </center>
