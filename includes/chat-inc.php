@@ -1,7 +1,19 @@
+<head>
+  <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://png.icons8.com/ios/1600/circled-e-filled.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+
 <?php 
 
-include_once 'header.php';
-include 'includes/dbh-inc.php';
+session_start();
+
+include 'dbh-inc.php';
 
 $offline = "";
 $check_id = "";
@@ -24,7 +36,7 @@ if($resultcheck > 0){
 
 if(!isset($_SESSION['s_id'])){
   
-  header("Location: login.php?login=must");
+  header("Location: ../login.php?login=must");
   exit();
   
 }
@@ -78,53 +90,9 @@ if($resultcheck > 0){
 
 ?>
 
-<head>
-  <title>Live Support</title>
-</head>
-
-
-<div class="login-page">
-  <div class="lform">
-    <?php if($offline == 1){ echo $messages; } else { echo '
-    <h3>Live Support</h3>
-      </br>
-        <div class="chat">
-          
-          <div class="messages">
             
-           
+<div class="message">
+              
+<?php echo $messages; ?>
             
-          </div>
-          
-        </div>
-      </br>
-      <form action="includes/insert-chat.php" method="POST">
-      <textarea id="message" style="resize:none;"class="lfield" placeholder="input message here" name="message" cols="30"></textarea>
-      <input type="submit" name="submit" class="lbutton" value="Send Message"/>  
-      </form>
-    
-</br>
-    <form action="includes/end-chat.php" method="POST">
-      <input type="submit" style="border: none; padding: 10px; background: lightgrey;" name="end" value="End the chat" />
-    </form>
-    ';}?>
-  </div>
-</div>
-
-<script>
-    function refresh_div() {
-        jQuery.ajax({
-            url:'includes/chat-inc.php',
-            type:'POST',
-            data: { method: 'fetch' },
-            success:function(data) {
-                jQuery(".messages").html(data);
-            }
-        });
-    }
-
-    t = setInterval(refresh_div,1000);
-</script>
-</div>
-  
 </div>

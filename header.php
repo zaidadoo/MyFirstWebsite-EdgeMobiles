@@ -4,6 +4,8 @@ session_start();
 
 ?>
 
+<div class="ajax">
+
 <!DOCTYPE html>
 <html lang="en" >
 

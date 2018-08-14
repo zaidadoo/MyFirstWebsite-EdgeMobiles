@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 11, 2018 at 04:34 AM
+-- Generation Time: Aug 14, 2018 at 07:51 AM
 -- Server version: 5.5.38-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -75,6 +75,58 @@ INSERT INTO `address` (`account_id`, `phone`, `city`, `street`, `building`, `flo
 (4, '0799026768', 'Amman', 'Faysal Al-Mubarak', '14', 'GF', '', 'Apartment on the left'),
 (3, '0799147997', 'Amman', 'Nabeel Al Maasher', '15', '3', '10', ''),
 (7, '+962796487308', 'Amman', 'Deir Ghbar, Street nabeel moa''sher', '15', '3', '10', 'ring da bell 10 times first please');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_session`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_session` (
+  `session` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_session`
+--
+
+INSERT INTO `admin_session` (`session`) VALUES
+(1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE IF NOT EXISTS `chat` (
+  `message_id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_id` int(11) unsigned NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` int(11) NOT NULL,
+  PRIMARY KEY (`message_id`),
+  KEY `account_id` (`account_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`message_id`, `account_id`, `message`, `timestamp`) VALUES
+(1, 6, 'Can you please restart your phone', 1534179900),
+(2, 7, 'Sure! just give me one minute', 1534179900);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat_session`
+--
+
+CREATE TABLE IF NOT EXISTS `chat_session` (
+  `session` int(1) NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
+  KEY `account_id` (`account_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -176,6 +228,18 @@ INSERT INTO `transactions` (`id`, `product_id_array`, `payer_email`, `first_name
 --
 ALTER TABLE `address`
   ADD CONSTRAINT `address_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`account_id`);
+
+--
+-- Constraints for table `chat`
+--
+ALTER TABLE `chat`
+  ADD CONSTRAINT `chat_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`account_id`);
+
+--
+-- Constraints for table `chat_session`
+--
+ALTER TABLE `chat_session`
+  ADD CONSTRAINT `chat_session_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`account_id`);
 
 --
 -- Constraints for table `orders`
