@@ -53,6 +53,20 @@ if(isset($_POST['submit'])){
           
           $id = $_SESSION['s_id'];
           
+          if(($row['username']) == 'admin'){
+            
+            $sql = "SELECT * FROM admin_session";
+              $result = mysqli_query($conn, $sql);
+            $resultcheck = mysqli_num_rows($result);
+            
+            if($resultcheck < 1){
+            
+            $sql = "INSERT INTO admin_session (session) VALUES ('1')";
+            $result = mysqli_query($conn, $sql);
+            
+            }
+          }
+          
           $sql = "SELECT * FROM address WHERE account_id = '$id'";
           $result = mysqli_query($conn, $sql);
           $resultcheck = mysqli_num_rows($result);

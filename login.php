@@ -35,6 +35,10 @@ if(isset($_SESSION['s_id'])){
         
         echo "<p>Logout successful</p></br>";
         
+      } elseif($host == '/login.php?login=must'){
+        
+        echo "<p>Please login first</p></br>";
+        
       }
       ?>
       </span>
