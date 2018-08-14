@@ -6,6 +6,7 @@ include 'dbh-inc.php';
 
 $account_id = $_SESSION['s_id'];
 $c_user = $_SESSION['s_user'];
+$message = mysqli_real_escape_string($conn, $_POST['message']);
 
 if(!isset($_POST['submit'])){
   
@@ -33,7 +34,6 @@ if(!isset($_POST['submit'])){
   $sql = "INSERT INTO chat_session (session, account_id) VALUES ('1', '$account_id')";
   $result = mysqli_query($conn, $sql);
     
-    $message = $_POST['message'];
     $sql = "INSERT INTO chat (message, account_id) VALUES ('$message', '$account_id')";
     $result = mysqli_query($conn, $sql);
     header("Location: ../chat.php");
@@ -41,7 +41,6 @@ if(!isset($_POST['submit'])){
     
    } elseif(($account_id == $check_id) || $c_user == 'admin') {
     
-    $message = $_POST['message'];
     $sql = "INSERT INTO chat (message, account_id) VALUES ('$message', '$account_id')";
     $result = mysqli_query($conn, $sql);
     header("Location: ../chat.php");

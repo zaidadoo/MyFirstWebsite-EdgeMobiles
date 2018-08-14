@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 14, 2018 at 07:51 AM
+-- Generation Time: Aug 14, 2018 at 10:02 AM
 -- Server version: 5.5.38-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `name` varchar(256) NOT NULL,
   PRIMARY KEY (`account_id`),
   KEY `account_id` (`account_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `accounts`
@@ -46,7 +46,8 @@ INSERT INTO `accounts` (`account_id`, `username`, `password`, `email`, `name`) V
 (4, 'mkhalaweh', '$2y$10$eGpvxIjvDuQkIEF6iNLatuqUXYEgcIYmjKZwIH78.owoeYrMooW/O', 'mkhalaweh10@gmail.com', 'Mohamad Halaweh'),
 (5, 'hhalaweh', '$2y$10$K1GWTrpXlsOTMCEIeBK8rOcmpuj486fniK4HDlTeQ4BT4cK3toZpW', 'hamzahalaweh@gmail.com', 'hamza'),
 (6, 'admin', '$2y$10$rBLgRzHcdbpP4YagpUsNPOGw3NyU6.4EIGv9j29v60GYpPCCgGlJi', 'admin@gmail.com', 'admin'),
-(7, 'user', '$2y$10$.NfTrW0anmFRVYcZG5noPeS71H3JUNzLHvedUMZ53.iSEEFfDuKSS', 'user@gmail.com', 'user');
+(7, 'user', '$2y$10$.NfTrW0anmFRVYcZG5noPeS71H3JUNzLHvedUMZ53.iSEEFfDuKSS', 'user@gmail.com', 'user'),
+(8, 'user2', '$2y$10$b2gUnkd1vZEx4rlqBq2I7uDmwSx3LvRWNyNJPDJN4fFzgrvJ5zYVe', 'user2@gmail.com', 'user two');
 
 -- --------------------------------------------------------
 
@@ -103,18 +104,9 @@ CREATE TABLE IF NOT EXISTS `chat` (
   `message_id` int(11) NOT NULL AUTO_INCREMENT,
   `account_id` int(11) unsigned NOT NULL,
   `message` text NOT NULL,
-  `timestamp` int(11) NOT NULL,
   PRIMARY KEY (`message_id`),
   KEY `account_id` (`account_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `chat`
---
-
-INSERT INTO `chat` (`message_id`, `account_id`, `message`, `timestamp`) VALUES
-(1, 6, 'Can you please restart your phone', 1534179900),
-(2, 7, 'Sure! just give me one minute', 1534179900);
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 -- --------------------------------------------------------
 
