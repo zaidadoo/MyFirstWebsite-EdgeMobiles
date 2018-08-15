@@ -86,6 +86,9 @@ include_once 'store-side.php';
         <input type="hidden" name="id" id="id" value="<?php echo $id; ?>" />
         <input type="submit" style="border: none; padding: 10px; background: lightgrey;" name="submit" id="submit" value="Add to cart" />
       </form>
+    <a href="store.php" class="gobackmobile"><div align="center" style="margin: auto;">
+      go back? </br></br>
+    </div></a>
     </div>
     </div>
   </div>
