@@ -40,11 +40,15 @@ if(isset($_GET['cart']) && $_GET['cart'] == "empty") {
 if (isset($_POST['item']) && $_POST['item'] != "") {
    
 	$item_to_adjust = mysqli_real_escape_string($conn, $_POST['item']);
+  $item_to_adjust = htmlspecialchars($item_to_adjust);
   $item_price = mysqli_real_escape_string($conn, $_POST['price']);
+  $item_price = htmlspecialchars($item_price);
   $item_name = mysqli_real_escape_string($conn, $_POST['name']);
+  $item_name = htmlspecialchars($item_name);
   $item_quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
+  $item_quantity = htmlspecialchars($item_quantity);
 	if ($quantity >= 100) { $quantity = 99; }
-	if ($quantity < 1) { $quantity = 1; }
+	if (($quantity < 1) || ($quantity = 1)) { $quantity = 1; }
 	if ($quantity == "") { $quantity = 1; }
 	$i = 0;
 	foreach ($_SESSION["cart_array"] as $item) { 

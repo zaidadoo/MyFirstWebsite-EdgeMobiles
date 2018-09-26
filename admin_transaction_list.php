@@ -32,12 +32,12 @@
         $product_list .= "
     <tr>
       <td>$d_id&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_product_name&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px; resize: vertical;' readonly>$d_product_name&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>$d_first_name&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_last_name&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_date&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_email&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_address&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px; resize: vertical;' readonly>$d_address&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>$d_status&nbsp&nbsp&nbsp&nbsp</td>
     </tr>";
         
@@ -68,13 +68,13 @@
         $product_list .= "
     <tr>
       <td>$d_id&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_product_name&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px; resize: vertical;' readonly>$d_product_name&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>$d_first_name&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_last_name&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_price&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_date&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_email&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_address&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px; resize: vertical;' readonly>$d_address&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>$d_status&nbsp&nbsp&nbsp&nbsp</td>
     </tr>";
         
@@ -108,7 +108,7 @@
     <div class="search2" >
   <form action="admin_transaction_list.php?search" method="GET">
       <input style="float:left; width:72.9%" type="text" placeholder="Search.." name="search">
-      <button class="search-button2" type="submit"><i class="fa fa-search"></i></button>
+      <button class="search-button2" style="height: 27.5px" type="submit"><i class="fa fa-search"></i></button>
   </form>
   </div>
       </center>

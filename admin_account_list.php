@@ -170,7 +170,7 @@
     <div class="search2" >
   <form action="admin_account_list.php?search1" method="GET">
       <input style="float:left; width:72.9%" type="text" placeholder="Search.." name="search1">
-      <button class="search-button2" type="submit"><i class="fa fa-search"></i></button>
+      <button class="search-button2" style="height: 27.5px" type="submit"><i class="fa fa-search"></i></button>
   </form>
   </div>
       </center>

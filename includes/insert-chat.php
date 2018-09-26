@@ -7,6 +7,7 @@ include 'dbh-inc.php';
 $account_id = $_SESSION['s_id'];
 $c_user = $_SESSION['s_user'];
 $message = mysqli_real_escape_string($conn, $_POST['message']);
+$message = htmlspecialchars($message);
 
 if(!isset($_POST['submit'])){
   

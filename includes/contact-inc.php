@@ -20,9 +20,13 @@ if(!isset($_POST['submit'])){
   }
   
   $name = mysqli_real_escape_string($_POST['name']);
+  $name = htmlspecialchars($name);
   $email = mysqli_real_escape_string($_POST['email']);
+  $email = htmlspecialchars($email);
   $phone = mysqli_real_escape_string($_POST['phone']);
+  $phone = htmlspecialchars($phone);
   $message = mysqli_real_escape_string($_POST['message']);
+  $message = htmlspecialchars($message);
   
   if(empty($name) || empty($message)){
     

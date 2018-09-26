@@ -57,7 +57,7 @@
         $product_list .= "
     <tr>
       <td>$d_id&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_product_name&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px;' readonly>$d_product_name&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>$d_price&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_order&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_date&nbsp&nbsp&nbsp&nbsp</td>
@@ -93,7 +93,7 @@
     <div class="search2" >
   <form action="admin_order_list.php?search" method="GET">
       <input style="float:left; width:72.9%" type="text" placeholder="Search.." name="search">
-      <button class="search-button2" type="submit"><i class="fa fa-search"></i></button>
+      <button class="search-button2" style="height: 27.5px" type="submit"><i class="fa fa-search"></i></button>
   </form>
   </div>
       </center>

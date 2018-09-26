@@ -39,6 +39,10 @@ if(isset($_SESSION['s_id'])){
         
         echo "<p>Please login first</p></br>";
         
+      } elseif($host == '/login.php?login=s_success'){
+        
+        echo "<p>Successfully created account</p></br>";
+        
       }
       ?>
       </span>

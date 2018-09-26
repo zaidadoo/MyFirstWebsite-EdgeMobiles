@@ -5,9 +5,13 @@ if(isset($_POST['submit'])) {
   include_once 'dbh-inc.php';
   
   $username = mysqli_real_escape_string($conn, $_POST['username']);
+  $username = htmlspecialchars($username);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $password = htmlspecialchars($password);
   $name = mysqli_real_escape_string($conn, $_POST['name']);
+  $name = htmlspecialchars($name);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $email = htmlspecialchars($email);
   
   //Error Handlers
   
@@ -56,7 +60,7 @@ if(isset($_POST['submit'])) {
           
           $sql = "INSERT INTO accounts (username, password, email, name) VALUES ('$username', '$hashedpwd', '$email', '$name');";
           mysqli_query($conn, $sql);
-          header("Location: ../signup.php?signup=success");
+          header("Location: ../login.php?login=s_success");
           exit();
           
         }

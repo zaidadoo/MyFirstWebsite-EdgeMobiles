@@ -32,10 +32,6 @@ include_once 'header.php';
         
         echo "<p>Error: email or username already taken</p></br>";
         
-      } elseif($host == '/signup.php?signup=success'){
-        
-        echo "<p>Success: account registered</p></br>";
-        
       }
       ?>
       </span>

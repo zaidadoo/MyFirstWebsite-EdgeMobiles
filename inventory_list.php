@@ -34,7 +34,7 @@
       <td>$d_price&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_category&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_subcategory&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_details&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px; resize: vertical;' readonly>$d_details&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>&nbsp$d_date&nbsp&nbsp&nbsp&nbsp</td>
       <td><form action='inventory_edit.php?editid=$d_id' method='POST'><input style='border: none;' type='submit' name='submit' value='edit $d_id'></form><form action='inventory_delete.php?deleteid=$d_id' method='POST'><input style='border: none;' type='submit' name='submit' value='delete $d_id'></form>&nbsp&nbsp&nbsp&nbsp</td>
     </tr>";
@@ -74,7 +74,7 @@
       <td>$d_price&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_category&nbsp&nbsp&nbsp&nbsp</td>
       <td>$d_subcategory&nbsp&nbsp&nbsp&nbsp</td>
-      <td><textarea readonly>$d_details&nbsp&nbsp&nbsp&nbsp</textarea></td>
+      <td><textarea style='border: 0px; resize: vertical;' readonly>$d_details&nbsp&nbsp&nbsp&nbsp</textarea></td>
       <td>&nbsp$d_date&nbsp&nbsp&nbsp&nbsp</td>
       <td><form action='inventory_edit.php?editid=$d_id' method='POST'><input style='border: none;' type='submit' name='submit' value='edit $d_id'></form><form action='inventory_delete.php?deleteid=$d_id' method='POST'><input style='border: none;' type='submit' name='submit' value='delete $d_id'></form>&nbsp&nbsp&nbsp&nbsp</td>
     </tr>";
@@ -152,7 +152,7 @@ if($host == '/inventory_list.php?inventory_list=delete'){
     <div class="search2" >
   <form action="inventory_list.php?search" method="GET">
       <input style="float:left; width:72.9%" type="text" placeholder="Search.." name="search">
-      <button class="search-button2" type="submit"><i class="fa fa-search"></i></button>
+      <button class="search-button2" style="height: 27.5px" type="submit"><i class="fa fa-search"></i></button>
   </form>
   </div>
       </center>

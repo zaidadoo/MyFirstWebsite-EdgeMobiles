@@ -7,7 +7,9 @@ if(isset($_POST['submit'])){
   include 'dbh-inc.php';
   
   $username = mysqli_real_escape_string($conn, $_POST['username']);
+  $username = htmlspecialchars($username);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $password = htmlspecialchars($password);
   
   //Error Handlers
   

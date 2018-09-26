@@ -8,10 +8,15 @@ include 'dbh-inc.php';
 if (isset($_POST['button'])) {
 	
   $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
+  $product_name = htmlspecialchars($product_name);
 	$price = mysqli_real_escape_string($conn, $_POST['price']);
+  $price = htmlspecialchars($price);
 	$category = mysqli_real_escape_string($conn, $_POST['category']);
+  $category = htmlspecialchars($category);
 	$subcategory = mysqli_real_escape_string($conn, $_POST['subcategory']);
+  $subcategory = htmlspecialchars($subcategory);
 	$details = mysqli_real_escape_string($conn, $_POST['details']);
+  $details = htmlspecialchars($details);
   
   if(empty($product_name) || empty($price) || empty($category) || empty($subcategory) || empty($details)){
     

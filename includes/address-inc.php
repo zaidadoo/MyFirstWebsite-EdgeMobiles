@@ -13,12 +13,19 @@ if(isset($_POST['submit'])) {
   $email = $_SESSION['s_email'];
     
   $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+  $phone = htmlspecialchars($phone);
   $city = mysqli_real_escape_string($conn, $_POST['city']);
+  $city = htmlspecialchars($city);
   $street = mysqli_real_escape_string($conn, $_POST['street']);
+  $street = htmlspecialchars($street);
   $building = mysqli_real_escape_string($conn, $_POST['building']);
+  $building = htmlspecialchars($building);
   $floor = mysqli_real_escape_string($conn, $_POST['floor']);
+  $floor = htmlspecialchars($floor);
   $apartment = mysqli_real_escape_string($conn, $_POST['apartment']);
+  $apartment = htmlspecialchars($apartment);
   $notes = mysqli_real_escape_string($conn, $_POST['notes']);
+  $notes = htmlspecialchars($notes);
   
   //Error Handlers
   //Empty Fields Checker

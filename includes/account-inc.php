@@ -13,9 +13,13 @@ if(isset($_POST['submit'])) {
   $email = $_SESSION['s_email'];
     
   $newpassword = mysqli_real_escape_string($conn, $_POST['new-password']);
+  $newpassword = htmlspecialchars($newpassword);
   $verifypassword = mysqli_real_escape_string($conn, $_POST['verify-password']);
+  $verifypassword = htmlspecialchars($verifypassword);
   $newname = mysqli_real_escape_string($conn, $_POST['name']);
+  $newname = htmlspecialchars($newname);
   $newemail = mysqli_real_escape_string($conn, $_POST['email']);
+  $newemail = htmlspecialchars($newemail);
   
   //Error Handlers
   
