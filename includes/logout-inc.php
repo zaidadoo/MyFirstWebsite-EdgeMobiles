@@ -10,7 +10,7 @@ if(isset($_SESSION['s_id'])){
 
 if($username == 'admin'){
   
-  $sql = "DELETE * FROM admin_session";
+  $sql = "DELETE FROM admin_session";
   $result = mysqli_query($conn, $sql);
   session_start();
   session_unset();

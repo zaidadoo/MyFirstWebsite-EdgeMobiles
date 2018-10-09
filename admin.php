@@ -27,7 +27,7 @@
     </br>
     </br>
     <a href="admin_transaction_list.php"><button class="refer">
-      Manage Online Trasactions
+      Manage Online Transactions
     </button></a>
     </br>
     </br>
